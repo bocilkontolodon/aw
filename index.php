@@ -22,7 +22,7 @@ $tw[] =$twe;
 }
 $username = implode(" ", $tw);
 echo $username;
-$twit = 'Viral mahasiswi UGM diajak dosen ke hotel agar bisa lulus http://bit.do/UGM_Viral'."\n\n".$username;
+$twit = 'Viral mahasiswi UGM diajak dosen ke hotel agar bisa lulus 👉 http://bit.do/UGM_Viral'."\n\n".$username;
 $t = $connection->post('statuses/update', array('status' => $twit));
 exit();
 
