@@ -14,7 +14,7 @@ $connection = new TwitterOAuth($cONSUMER_KEY, $cONSUMER_SECRET, $access_token, $
 $var = file_get_contents('kw.txt'); 
 $result = explode(',',$var); 
 $kw = $result[array_rand($result)];
-$tweets  = $connection->get("search/tweets", ["count" => 5,  "q" => $kw,  "result_type" => 'recent',]);
+$tweets  = $connection->get("search/tweets", ["count" => 5,  "q" => $kw,  "result_type" => 'recent',  "lang" => 'id',]);
 foreach ($tweets->statuses as $key => $tweet) {
 
 $twe =  '@'.$tweet->user->screen_name;
